@@ -1,9 +1,11 @@
 <script>
 	import { onMount } from 'svelte';
 
-	export let data = '';
+	export let name = '';
 
 	let currentDate = new Date();
+
+	$: footerContent = `Welcome, ${name}`;
 
 	onMount(() => {
 		const interval = setInterval(() => {
@@ -22,7 +24,7 @@
 			<p>{currentDate.toLocaleString()}</p>
 		</div>
 		<div class="content-block">
-			<p class="name">{data}</p>
+			<p class="name">{footerContent}</p>
 			<a href="">Terms and conditions</a>
 			<a href=""> About us</a>
 			<a href="">Privacy Policy</a>

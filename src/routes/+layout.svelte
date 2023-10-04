@@ -9,4 +9,4 @@
 
 <slot />
 
-<Footer data="Welcome, Brian. J Reed" />
+<Footer name="Brian. J Reed" />
